@@ -1,0 +1,113 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom right, #ff6b6b, #ff9f9f, #f06292, #f8bbd0);
+}
+
+.container {
+  text-align: center;
+  color: #fff;
+}
+
+.title {
+  margin-bottom: 40px; /* Increased margin */
+  font-size: 80px; /* Increased font size */
+  color: #fff;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 4px;
+  margin-top: 20px;
+  background: linear-gradient(to bottom right, #ff6b6b, #ff9f9f, #f06292, #f8bbd0);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased box shadow */
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #fff, #e0e0e0);
+  transition: background 0.3s ease;
+}
+
+.cell:hover {
+  background: linear-gradient(to bottom, #D4D4D4, #fff);
+}
+
+.cell.X {
+  color: #3498db;
+}
+
+.cell.O {
+  color: #e74c3c;
+}
+
+.cell.winner {
+  background: linear-gradient(to bottom, #98c379, #5a9d5a);
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to right, #3498db, #5dade2, #85c1e9); /* Added background gradient */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn.gradient:hover {
+  background: linear-gradient(to right, #2c3e50, #3498db, #2980b9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.btn:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.winner-display {
+  margin-top: 20px;
+  font-size: 50px; /* Increased font size for winner display */
+  font-weight: bold; /* Added font weight */
+  color: #000; /* Changed color for winner display */
+  display: none; /* Initially hide the winner display */
+}
+
+/* Add this to handle the 'show' class for winner display */
+.winner-display.show {
+  display: block;
+}
